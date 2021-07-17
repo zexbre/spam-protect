@@ -1,0 +1,10 @@
+{
+    "name": "zexbre/spam-protect",
+    "description": "A simple, driver based spam protection package.",
+    "authors": [
+        {
+            "name": "Nikola Zeravcic",
+            "email": "contact@bytenet.rs"
+        }
+    ]
+}
