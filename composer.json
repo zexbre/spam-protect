@@ -2,6 +2,10 @@
     "name": "zexbre/spam-protect",
     "description": "A simple, driver based spam protection package.",
     "license": "MIT",
+    "support": {
+        "issues": "https://github.com/zexbre/spam-protect/issues",
+        "source": "https://github.com/zexbre/spam-protect"
+    },
     "authors": [
         {
             "name": "Nikola Zeravcic",
