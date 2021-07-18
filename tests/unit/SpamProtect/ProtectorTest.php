@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace ZexBre\SpamProtect;
 
 use PHPUnit\Framework\TestCase;
+use ZexBre\SpamProtect\Contracts\Protector;
+use ZexBre\SpamProtect\ProtectorImpl;
 
 class ProtectorTest extends TestCase
 {
-    public function testIncomplete(): void
+    public function testIsInstanceOfProtectorInterface(): void
     {
-        $this->assertTrue(true, 'This should already work.');
-        $this->markTestIncomplete('This test has not been implemented yet.');
+        $this->assertInstanceOf(Protector::class, new ProtectorImpl());
     }
 }
