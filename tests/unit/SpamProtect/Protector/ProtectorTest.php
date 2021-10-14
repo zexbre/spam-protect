@@ -40,7 +40,7 @@ class ProtectorTest extends TestCase
         $this->assertSame($this->protector, $verifiedProtector);
     }
 
-    public function testResponseIfHumanDoesRequest(): void
+    public function testResponseForHumanRequest(): void
     {
         $this->verificator->method('verify')
              ->willReturn(new VerificatorResponse(true, []));
@@ -54,7 +54,7 @@ class ProtectorTest extends TestCase
         $this->assertEmpty($this->protector->getErrors());
     }
 
-    public function testResponseIfRobotDoesRequest(): void
+    public function testResponseForRobotRequest(): void
     {
         $this->verificator->method('verify')
              ->willReturn(new VerificatorResponse(false, []));
@@ -82,10 +82,13 @@ class ProtectorTest extends TestCase
         $this->assertNotEmpty($this->protector->getErrors());
     }
 
-    public function testProtectorAfterVerifyingMustContainVerificatorResponseDataStructure()
+    public function testVerifiedProtectorContainVerificatorResponseDataStructure()
     {
-        $verificatorResponse = $this->protector->verify();
+        $this->protector->verify();
 
-        $this->assertInstanceOf(VerificatorResponse::class, $this->protector->getVerificatorResponse());
+        $this->assertInstanceOf(
+            VerificatorResponse::class,
+            $this->protector->getVerificatorResponse()
+        );
     }
 }
