@@ -18,6 +18,9 @@
     "require-dev": {
         "phpunit/phpunit": "^9.5"
     },
+    "suggest": {
+        "zexbre/mathguard": "Needed for support MathGuard verificator."
+    },
     "autoload": {
         "psr-4": {
             "ZexBre\\SpamProtect\\": "src/SpamProtect/"
