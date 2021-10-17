@@ -11,5 +11,24 @@
             "name": "Nikola Zeravcic",
             "email": "contact@bytenet.rs"
         }
-    ]
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "suggest": {
+        "zexbre/mathguard": "Needed for support MathGuard verificator."
+    },
+    "autoload": {
+        "psr-4": {
+            "ZexBre\\SpamProtect\\": "src/SpamProtect/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ZexBre\\SpamProtect\\": "tests/unit/SpamProtect/"
+        }
+    }
 }
