@@ -8,9 +8,9 @@ use ArgumentCountError;
 use PHPUnit\Framework\TestCase;
 use ZexBre\SpamProtect\ProtectorWidgetImpl;
 
-class ProtectorWidgetThrowExceptionTest extends TestCase
+class ProtectorWidgetThrowExceptionForMissingArgumentsTest extends TestCase
 {
-    public function testThrowExceptionIfVerificatorWidgetArgumentIsNotSet()
+    public function testExceptionIfVerificatorWidgetArgumentIsNotSet()
     {
         $this->expectException(ArgumentCountError::class);
         (new ProtectorWidgetImpl)->render();
