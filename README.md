@@ -19,7 +19,7 @@ instead of using the issue tracker.
 
 ## Credits
 
-- Nikola Zeravcic[link-author]
+- [Nikola Zeravcic][link-author]
 - [All Contributors][link-contributors]
 
 ## License
