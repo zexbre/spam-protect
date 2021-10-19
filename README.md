@@ -4,8 +4,8 @@ A simple, driver based spam protection package.
 
 ## Change log
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed
-recently.
+Please see [CHANGELOG-0.x](CHANGELOG-0.x.md) for more information what has
+changed recently.
 
 ## Contributing
 
