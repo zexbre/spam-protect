@@ -14,7 +14,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and
 
 ## Security
 
-If you discover any security related issues, please email to contact@bytenet.rs
+If you discover any security related issues, please email to niks986@gmail.com
 instead of using the issue tracker.
 
 ## Credits
