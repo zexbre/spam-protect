@@ -2,6 +2,9 @@
 
 A simple, driver based spam protection package.
 
+Check for spam messages on client requests before forwarding them to the system
+for further processing.
+
 ## Change log
 
 Please see [CHANGELOG-0.x](CHANGELOG-0.x.md) for more information what has
