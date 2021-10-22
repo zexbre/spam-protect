@@ -13,6 +13,62 @@ Install the latest version with
 $ composer require zexbre/spam-protect
 ```
 
+## Basic Usage
+
+### Client side
+
+```html
+
+<?php use ZexBre\SpamProtect\Factory\ReCaptchaVersion2Factory; ?>
+
+<html>
+    <head>
+        <?php
+        // ...
+        $widgetData = ReCaptchaVersion2Factory::getWidgetResponse([
+            'reCaptchaSiteKey' => [RECAPTCHA-SITE-KEY],
+            'hl' => [LANGUAGE-CODE], // optional
+        ]);
+        echo $widgetData->htmlHead;
+        ?>
+    </head>
+
+    <body>
+        <?php
+        // ...
+        echo $widgetData->htmlBody;
+        ?>
+    </body>
+<html>
+```
+
+### Server side
+
+```php
+<?php
+
+use ZexBre\SpamProtect\Factory\ReCaptchaVersion2Factory;
+
+// (1/3) preparation
+$spamProtect = ReCaptchaVersion2Factory::getProtector([
+    'reCaptchaSecretKey' => [RECAPTCHA-SECRET-KEY],
+    'gReCaptchaResponse' => [RECAPTCHA-RESPONSE],
+    'acceptLanguage' => [ACCEPT-LANGUAGE-HEADER], // optional
+    'httpReferer' => [HTTP-REFERER-HEADER], // optional, see '$_SERVER["HTTP_REFERER"]'
+    'httpUserAgent' => [HTTP-USER-AGENT-HEADER], // optional, see '$_SERVER["HTTP_USER_AGENT"]'
+]);
+
+// (2/3) verification
+$spamProtect->verify();
+
+// (3/3) validation
+$isHuman = $spamProtect->isHuman(); // boolean
+$isRobot = $spamProtect->isRobot(); // boolean
+$isValidResponse = $spamProtect->isValidResponse(); // boolean
+$isInvalidResponse = $spamProtect->isInvalidResponse(); // boolean
+$errors = $spamProtect->getErrors(); // array
+```
+
 ## Change log
 
 Please see [CHANGELOG-0.x](CHANGELOG-0.x.md) for more information what has
