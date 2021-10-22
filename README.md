@@ -5,6 +5,14 @@ A simple, driver based spam protection package.
 Check for spam messages on client requests before forwarding them to the system
 for further processing.
 
+## Installation
+
+Install the latest version with
+
+```bash
+$ composer require zexbre/spam-protect
+```
+
 ## Change log
 
 Please see [CHANGELOG-0.x](CHANGELOG-0.x.md) for more information what has
