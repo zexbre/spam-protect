@@ -26,6 +26,10 @@ class ReCaptchaVersion2Factory
             $params['reCaptchaSiteKey'] ? strip_tags($params['reCaptchaSiteKey']) : ''
         );
 
+        if (! empty($params['data-size'])) {
+            $verificatorWidget->addAttributeToDivTag('data-size', strip_tags($params['data-size']));
+        }
+
         return (new ProtectorWidgetImpl)->render($verificatorWidget);
     }
 
