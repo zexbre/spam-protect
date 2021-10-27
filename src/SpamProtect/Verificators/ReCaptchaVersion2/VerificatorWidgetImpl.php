@@ -13,12 +13,12 @@ class VerificatorWidgetImpl implements VerificatorWidget
     /**
      * @var string
      */
-    public $head;
+    private $head;
 
     /**
      * @var string
      */
-    public $body;
+    private $body;
 
     public function __construct(string $head = '', string $body = '')
     {

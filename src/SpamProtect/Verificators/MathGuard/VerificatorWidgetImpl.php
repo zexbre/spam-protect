@@ -14,7 +14,7 @@ class VerificatorWidgetImpl implements VerificatorWidget
     /**
      * @var integer|null
      */
-    public $prime;
+    private $prime;
 
     public function __construct(?int $prime)
     {
