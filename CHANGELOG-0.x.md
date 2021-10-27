@@ -8,6 +8,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [0.2.0] - 2021-10-27
+### Added
+- Support for custom attributes for reCAPTCHA validator.
+  ([7d37262](https://github.com/zexbre/spam-protect/commit/7d37262e7081086d832c4a087440ab741312db31))
+
 ## [0.1.0] - 2021-10-22
 ### Added
 - Protector Widget
@@ -19,5 +24,6 @@ and this project adheres to
 - MathGuard verificator
   ([0e38f0b](https://github.com/zexbre/spam-protect/commit/0e38f0b5058ab2e4db1a40e2a3df67c1dedbf884))
 
-[Unreleased]: https://github.com/zexbre/spam-protect/compare/v0.1.0...0.x
+[Unreleased]: https://github.com/zexbre/spam-protect/compare/v0.2.0...0.x
+[0.2.0]: https://github.com/zexbre/spam-protect/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/zexbre/spam-protect/releases/tag/v0.1.0
