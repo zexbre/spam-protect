@@ -6,42 +6,12 @@ namespace ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Request\DataStructur
 
 class RequestData
 {
-    /**
-     * @var string
-     */
-    public $providerUrl;
-
-    /**
-     * @var string
-     */
-    public $secretKey;
-
-    /**
-     * @var string
-     */
-    public $gResponse;
-
-    /**
-     * @var string
-     */
-    public $ip;
-
-    /**
-     * @var RequestHeader
-     */
-    public $requestHeader;
-
     public function __construct(
-        string $providerUrl,
-        string $secretKey,
-        string $gResponse,
-        string $ip,
-        RequestHeader $requestHeader
+        public string $providerUrl,
+        public string $secretKey,
+        public string $gResponse,
+        public string $ip,
+        public RequestHeader $requestHeader,
     ){
-        $this->providerUrl = $providerUrl;
-        $this->secretKey = $secretKey;
-        $this->gResponse = $gResponse;
-        $this->ip = $ip;
-        $this->requestHeader = $requestHeader;
     }
 }

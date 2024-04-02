@@ -6,40 +6,13 @@ namespace ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Request\DataStructur
 
 class RequestHeader
 {
-    ///**
-    // * @var string
-    // */
-    //public $contentType; // 'text/plain; charset=utf-8';
-
-    /**
-     * @var string
-     */
-    public $accept;
-
-    ///**
-    // * @var string
-    // */
-    //public $acceptEncoding; // 'gzip,deflate,sdch'
-
-    /**
-     * @var string
-     */
-    public $acceptLanguage;
-
-    /**
-     * @var string
-     */
-    public $referer;
-
-    /**
-     * @var string
-     */
-    public $userAgent;
-
-    public function __construct(string $accept, string $acceptLanguage, string $referer, string $userAgent){
-        $this->accept = $accept;
-        $this->acceptLanguage = $acceptLanguage;
-        $this->referer = $referer;
-        $this->userAgent = $userAgent;
+    public function __construct(
+//        public string $contentType, // 'text/plain; charset=utf-8'
+        public string $accept,
+//        public string $acceptEncoding, // 'gzip,deflate,sdch'
+        public string $acceptLanguage,
+        public string $referer,
+        public string $userAgent,
+    ){
     }
 }

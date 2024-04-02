@@ -5,28 +5,34 @@ declare(strict_types=1);
 namespace ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Request\DataStructures;
 
 use PHPUnit\Framework\TestCase;
-use ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Request\DataStructures\RequestHeader;
 
 class RequestHeaderTest extends TestCase
 {
+    private RequestHeader $requestHeader;
+
+    protected function setUp(): void
+    {
+        $this->requestHeader = new RequestHeader('', '', '', '');
+    }
+
     public function testShoudHaveAcceptField(): void
     {
-        $this->assertClassHasAttribute('accept', RequestHeader::class);
+        $this->assertObjectHasProperty('accept', $this->requestHeader);
     }
 
     public function testShoudHaveAcceptLanguageField(): void
     {
-        $this->assertClassHasAttribute('acceptLanguage', RequestHeader::class);
+        $this->assertObjectHasProperty('acceptLanguage', $this->requestHeader);
     }
 
     public function testShoudHaveRefererField(): void
     {
-        $this->assertClassHasAttribute('referer', RequestHeader::class);
+        $this->assertObjectHasProperty('referer', $this->requestHeader);
     }
 
     public function testShoudHaveUserAgentField(): void
     {
-        $this->assertClassHasAttribute('userAgent', RequestHeader::class);
+        $this->assertObjectHasProperty('userAgent', $this->requestHeader);
     }
 
     public function testExpectedNumberOfClassMethods(): void

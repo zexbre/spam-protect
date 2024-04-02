@@ -5,19 +5,24 @@ declare(strict_types=1);
 namespace ZexBre\SpamProtect\DataStructures;
 
 use PHPUnit\Framework\TestCase;
-use ZexBre\SpamProtect\DataStructures\WidgetResponse;
 
 class WidgetResponseTest extends TestCase
 {
+    private WidgetResponse $widgetResponse;
+
+    protected function setUp(): void
+    {
+        $this->widgetResponse = new WidgetResponse(null, null);
+    }
 
     public function testShoudHaveHtmlHeadField(): void
     {
-        $this->assertClassHasAttribute('htmlHead', WidgetResponse::class);
+        $this->assertObjectHasProperty('htmlHead', $this->widgetResponse);
     }
 
     public function testShoudHaveHtmlBodyField(): void
     {
-        $this->assertClassHasAttribute('htmlBody', WidgetResponse::class);
+        $this->assertObjectHasProperty('htmlBody', $this->widgetResponse);
     }
 
     public function testExpectedNumberOfClassMethods(): void

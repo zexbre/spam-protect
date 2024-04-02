@@ -4,35 +4,19 @@ declare(strict_types=1);
 
 namespace ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Request;
 
+use CurlHandle;
 use ZexBre\SpamProtect\Exceptions\InvalidVerificationExecutionException;
 use ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Request\DataStructures\RequestData;
 
 class Request
 {
-    /**
-     * @var boolean
-     */
-    private $allowDebug = false;
+    private CurlHandle $ch;
+    private string $response;
 
-    /**
-     * @var RequestData
-     */
-    private $data;
-
-    /**
-     * @var \CurlHandle
-     */
-    private $ch;
-
-    /**
-     * @var string
-     */
-    private $response;
-
-    public function __construct(RequestData $data, bool $allowDebug = false)
-    {
-        $this->data = $data;
-        $this->allowDebug = $allowDebug;
+    public function __construct(
+        private RequestData $data,
+        private bool $allowDebug = false,
+    ) {
     }
 
     public function send(): string

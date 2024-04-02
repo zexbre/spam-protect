@@ -5,18 +5,24 @@ declare(strict_types=1);
 namespace ZexBre\SpamProtect\DataStructures;
 
 use PHPUnit\Framework\TestCase;
-use ZexBre\SpamProtect\DataStructures\VerificatorResponse;
 
 class VerificatorResponseTest extends TestCase
 {
+    private VerificatorResponse $verificator;
+
+    protected function setUp(): void
+    {
+        $this->verificator = new VerificatorResponse(null, []);
+    }
+
     public function testShoudHaveIsHumanField(): void
     {
-        $this->assertClassHasAttribute('isHuman', VerificatorResponse::class);
+        $this->assertObjectHasProperty('isHuman', $this->verificator);
     }
 
     public function testShoudHaveIsErorsField(): void
     {
-        $this->assertClassHasAttribute('errors', VerificatorResponse::class);
+        $this->assertObjectHasProperty('errors', $this->verificator);
     }
 
     public function testExpectedNumberOfClassMethods(): void

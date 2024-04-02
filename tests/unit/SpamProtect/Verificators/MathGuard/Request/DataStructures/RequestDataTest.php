@@ -5,23 +5,29 @@ declare(strict_types=1);
 namespace ZexBre\SpamProtect\Verificators\MathGuard\Request\DataStructures;
 
 use PHPUnit\Framework\TestCase;
-use ZexBre\SpamProtect\Verificators\MathGuard\Request\DataStructures\RequestData;
 
 class RequestDataTest extends TestCase
 {
+    private RequestData $requestData;
+
+    protected function setUp(): void
+    {
+        $this->requestData = new RequestData(null, null, null);
+    }
+
     public function testShoudHaveMathguardAnswerField(): void
     {
-        $this->assertClassHasAttribute('mathguardAnswer', RequestData::class);
+        $this->assertObjectHasProperty('mathguardAnswer', $this->requestData);
     }
 
     public function testShoudHaveMathguardCodeField(): void
     {
-        $this->assertClassHasAttribute('mathguardCode', RequestData::class);
+        $this->assertObjectHasProperty('mathguardCode', $this->requestData);
     }
 
     public function testShoudHavePrimeField(): void
     {
-        $this->assertClassHasAttribute('prime', RequestData::class);
+        $this->assertObjectHasProperty('prime', $this->requestData);
     }
 
     public function testExpectedNumberOfClassMethods(): void

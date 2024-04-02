@@ -4,26 +4,17 @@ declare(strict_types=1);
 
 namespace ZexBre\SpamProtect\Verificators\ReCaptchaVersion2;
 
+use DOMDocument;
+use DOMElement;
 use ZexBre\SpamProtect\Contracts\VerificatorWidget;
 use ZexBre\SpamProtect\DataStructures\WidgetResponse;
 use ZexBre\SpamProtect\Factory\ResponseDataFactory;
 
 class VerificatorWidgetImpl implements VerificatorWidget
 {
-    /**
-     * @var DOMDocument
-     */
-    private $domDocument;
-
-    /**
-     * @var DOMElement
-     */
-    private $head;
-
-    /**
-     * @var DOMElement
-     */
-    private $body;
+    private DOMDocument $domDocument;
+    private DOMElement $head;
+    private DOMElement $body;
 
     public function __construct(string $head = '', string $body = '')
     {
@@ -60,7 +51,7 @@ class VerificatorWidgetImpl implements VerificatorWidget
         $this->head->setAttribute("src", $src);
         $this->domDocument->appendChild($this->head);
     }
-    
+
     private function makeDivTag(string $body = ''): void
     {
         $this->body = $this->domDocument->createElement("div");
