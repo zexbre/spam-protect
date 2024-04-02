@@ -8,6 +8,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [0.3.0] - 2024-04-02
+### Changed
+- Support for PHP >=8.1
+  ([9b600aa](https://github.com/zexbre/spam-protect/commit/9b600aae09f001c28f4a5287b21fbe9685b4f99c))
+
 ## [0.2.0] - 2021-10-27
 ### Added
 - Support for custom attributes for reCAPTCHA validator.
@@ -24,6 +29,7 @@ and this project adheres to
 - MathGuard verificator
   ([0e38f0b](https://github.com/zexbre/spam-protect/commit/0e38f0b5058ab2e4db1a40e2a3df67c1dedbf884))
 
-[Unreleased]: https://github.com/zexbre/spam-protect/compare/v0.2.0...0.x
+[Unreleased]: https://github.com/zexbre/spam-protect/compare/v0.3.0...0.x
+[0.3.0]: https://github.com/zexbre/spam-protect/compare/v0.2.0...v0.3.0
 [0.2.0]: https://github.com/zexbre/spam-protect/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/zexbre/spam-protect/releases/tag/v0.1.0
