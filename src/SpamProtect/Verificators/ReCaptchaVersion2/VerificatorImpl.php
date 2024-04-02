@@ -13,14 +13,9 @@ use ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Response\Formatter\FromStr
 
 class VerificatorImpl implements Verificator
 {
-    /**
-     * @var Request
-     */
-    private $request;
-
-    public function __construct(Request $request)
-    {
-        $this->request = $request;
+    public function __construct(
+        private Request $request,
+    ) {
     }
 
     public function verify(): VerificatorResponse

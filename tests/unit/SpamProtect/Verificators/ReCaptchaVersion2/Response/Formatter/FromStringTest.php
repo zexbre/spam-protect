@@ -6,7 +6,6 @@ namespace ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Response\Formatter;
 
 use PHPUnit\Framework\TestCase;
 use ZexBre\SpamProtect\DataStructures\VerificatorResponse;
-use ZexBre\SpamProtect\Verificators\ReCaptchaVersion2\Response\Formatter\FromString;
 
 class FromStringTest extends TestCase
 {

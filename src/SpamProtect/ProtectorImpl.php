@@ -11,24 +11,12 @@ use ZexBre\SpamProtect\Exceptions\VerificationIsNotExecutedException;
 
 class ProtectorImpl implements Protector
 {
-    /**
-     * @var Verificator
-     */
-    private $verificator;
+    private bool $isVerificationExecuted = false;
+    private VerificatorResponse|null $verificatorResponse;
 
-    /**
-     * @var bool
-     */
-    private $isVerificationExecuted = false;
-
-    /**
-     * @var VerificatorResponse|null
-     */
-    private $verificatorResponse;
-
-    public function __construct(Verificator $verificator)
-    {
-        $this->verificator = $verificator;
+    public function __construct(
+        private Verificator $verificator,
+    ) {
     }
 
     public function verify(): Protector
